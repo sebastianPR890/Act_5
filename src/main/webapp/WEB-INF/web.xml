@@ -4,9 +4,25 @@
         <servlet-name>validarUsuarioServlet</servlet-name>
         <servlet-class>controladores.validarUsuarioServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ValidarUsuarioServlet</servlet-name>
+        <servlet-class>controladores.ValidarUsuarioServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ValidarUsuariosServlet</servlet-name>
+        <servlet-class>controladores.ValidarUsuariosServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>validarUsuarioServlet</servlet-name>
         <url-pattern>/validarUsuarioServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ValidarUsuarioServlet</servlet-name>
+        <url-pattern>/ValidarUsuarioServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ValidarUsuariosServlet</servlet-name>
+        <url-pattern>/ValidarUsuariosServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
