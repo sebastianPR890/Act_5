@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Error de Acceso</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #5dade2, #a569bd, #48c9b0);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes gradient {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        .error-box { 
+            background: linear-gradient(145deg, #ffffff, #e0e0e0);
+            border-radius: 20px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+            padding: 40px 50px;
+            width: 320px;
+            max-width: 90%;
+            color: #333;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 2px solid #d1d1d1;
+        }
+        a { color: #721c24; text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="error-box">
+        <h2>Acceso denegado</h2>
+        <p>Usuario y/o contraseña incorrectos.</p>
+        <p>Debes iniciar sesión correctamente para ver esta página.</p>
+        <a href="login.html">Volver al login</a>
+    </div>
+</body>
+</html>
