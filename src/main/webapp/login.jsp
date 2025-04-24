@@ -1,10 +1,16 @@
+<%-- 
+    Document   : bienvenida
+    Created on : 22/04/2025, 6:23:45 p. m.
+    Author     : sebit
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Bienvenido</title>
+    <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Fuente moderna -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -26,54 +32,56 @@
             100% {background-position: 0% 50%;}
         }
 
-        .welcome-container {
+        .login-container {
             background: linear-gradient(145deg, #ffffff, #e0e0e0);
             padding: 40px 50px;
             border-radius: 20px;
             box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
             text-align: center;
             width: 90%;
-            max-width: 500px;
+            max-width: 400px;
         }
 
-        .welcome-container h1 {
-            font-size: 32px;
+        .login-container h2 {
             color: #4a4a4a;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        .welcome-container p {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 30px;
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
         }
 
-        .welcome-container a {
-            text-decoration: none;
+        .login-container input[type="submit"] {
             background-color: #48c9b0;
             color: white;
+            border: none;
             padding: 12px 24px;
             border-radius: 10px;
             font-size: 16px;
+            cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
-        .welcome-container a:hover {
+        .login-container input[type="submit"]:hover {
             background-color: #1abc9c;
         }
     </style>
 </head>
 <body>
-    <div class="welcome-container">
-        <h1>¡Bienvenid@!</h1>
-        <p>Tu ingreso fue exitoso. Nos alegra tenerte aquí.</p>
-        <a href="paginaPrincipal.html">Ir a la página principal</a>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form method="post" action="ValidarUsuario">
+            Usuario:<br>
+            <input type="text" name="usuario"><br>
+            Clave:<br>
+            <input type="password" name="clave"><br><br>
+            <input type="submit" value="Ingresar">
+        </form>
     </div>
-    <script>
-    if (localStorage.getItem("autenticado") !== "true") {
-        window.location.href = "error.html";
-    }
-</script>
-
 </body>
 </html>

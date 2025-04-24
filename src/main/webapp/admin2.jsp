@@ -1,10 +1,17 @@
+<%-- 
+    Document   : admin2
+    Created on : 22/04/2025, 6:43:37 p. m.
+    Author     : sebit
+--%>
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Error de Acceso</title>
+    <title>Admin1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -25,27 +32,38 @@
             100% {background-position: 0% 50%;}
         }
 
-        .error-box { 
+        .admin-container {
             background: linear-gradient(145deg, #ffffff, #e0e0e0);
+            padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
-            padding: 40px 50px;
-            width: 320px;
-            max-width: 90%;
-            color: #333;
             text-align: center;
-            transition: all 0.4s ease;
-            border: 2px solid #d1d1d1;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+            width: 90%;
+            max-width: 500px;
         }
-        a { color: #721c24; text-decoration: underline; }
+
+        h1, p {
+            color: #4a4a4a;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: #48c9b0;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 10px;
+        }
+
+        a:hover {
+            background-color: #1abc9c;
+        }
     </style>
 </head>
 <body>
-    <div class="error-box">
-        <h2>Acceso denegado</h2>
-        <p>Usuario y/o contraseña incorrectos.</p>
-        <p>Debes iniciar sesión correctamente para ver esta página.</p>
-        <a href="login.html">Volver al login</a>
+    <div class="admin-container">
+        <h1>Bienvenido Admin2</h1>
+        <p>Esta es tu vista personalizada.</p>
+        <a href="logout.jsp">Cerrar sesión</a>
     </div>
 </body>
 </html>
